@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage[absolute,overlay]{textpos}
+
+\setmainlanguage{thai}
+\newfontfamily\thaifont[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = THSarabunIT9,
+    BoldFont = THSarabunIT9Bold,
+    Script=Thai,
+]{THSarabunIT9}
+
+\setmainfont[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = THSarabunIT9,
+    BoldFont = THSarabunIT9Bold,
+    Script=Thai,
+]{THSarabunIT9}
+
+% For underlining
+\usepackage[normalem]{ulem}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\begin{document}
+% Absolutely position nok image at top left
+% \begin{textblock*}{2cm}(2cm,2cm)
+%     \includegraphics[width=1.5cm]{assets/nok.png}
+% \end{textblock*}
+
+% --- Top: rectangle right ---
+\noindent
+\begin{minipage}[t]{0.99\textwidth}
+    \hfill
+    \fbox{\parbox{0.25\textwidth}{
+        \footnotesize
+        งานแผนงานและยุทธศาสตร์ฯ \\
+        เลขที่รายการ................................. \\
+        หน่วยงาน (\textcolor{red}{กลุ่มงาน/ฝ่าย/งาน ที่ขออนุมัติ})
+    }}
+\end{minipage}
+
+% --- Title centered below logo ---
+\vspace{1.5em}
+\begin{center}
+    {\bfseries\LARGE บันทึกข้อความ}
+\end{center}
+
+% --- Form fields ---
+\noindent
+\textbf{ส่วนราชการ} \textcolor{red}{งานพัสดุ} กลุ่มงานบริหารทั่วไป โรงพยาบาลพุทไธสง โทรศัพท์ <<ใส่เบอร์>> \\
+\textbf{ที่} \rule{3cm}{0.4pt} \hspace{1cm} \textbf{วันที่} \rule{3cm}{0.4pt} \\
+\textbf{เรื่อง} \textcolor{red}{ขออนุมัติ (รายการที่ขอซื้อ/จ้าง) โดยวิธีเฉพาะเจาะจง} \\
+\textbf{เรียน} ผู้ว่าราชการจังหวัดบุรีรัมย์
+
+\vspace{0.5em}
+
+% --- 1. ความเป็นมา ---
+\textbf{๑. ความเป็นมา} \\
+ตามที่ โรงพยาบาลพุทไธสง สำนักงานสาธารณสุขจังหวัดบุรีรัมย์ ได้รับอนุมัติ \textcolor{red}{(รายการครุภัณฑ์ที่ได้รับอนุมัติ)} และงบประมาณ \textcolor{red}{(ประเภทค่าใช้จ่าย)} ที่อ้างในลักษณะ \textcolor{red}{(ประเภทงบประมาณ)} ประจำปีงบประมาณ \textcolor{red}{(ปีงบประมาณ)} ของหน่วยราชการในสังกัดสำนักงานสาธารณสุขฯ \\ 
+ตามหนังสือที่ ศธ ๐๐๐๐/ลงวันที่ \rule{2.5cm}{0.4pt} ถึง \rule{2.5cm}{0.4pt}
+
+\vspace{0.5em}
+
+% --- Table ---
+\renewcommand{\arraystretch}{1}
+\begin{center}
+\hspace{3cm}
+\begin{tabular}{|>{\centering\arraybackslash}m{1cm}|p{4cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
+\hline
+ลำดับ & รายการ & จำนวน & หน่วยนับ & ราคาต่อหน่วย & จำนวนเงิน \\
+\hline
+1 &  &  &  &  &  \\
+\hline
+2 &  &  &  &  &  \\
+\hline
+3 &  &  &  &  &  \\
+\hline
+\multicolumn{5}{|r|}{รวมราคา} &  \\
+\hline
+\multicolumn{5}{|r|}{ภาษีมูลค่าเพิ่ม \textcolor{red}{\%}} &  \\
+\hline
+\multicolumn{5}{|r|}{รวมราคาทั้งสิ้น} &  \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5em}
+
+% --- 2. ข้อระเบียบ/กฎหมาย ---
+\textbf{๒. ข้อระเบียบ/กฎหมาย} \\
+๒.๑ พระราชบัญญัติการจัดซื้อจัดจ้างและการบริหารพัสดุภาครัฐ พ.ศ. ๒๕๖๐ ลงวันที่ ๒๔ กุมภาพันธ์ ๒๕๖๐ มาตรา ๑๑ \\
+๒.๒ ระเบียบกระทรวงการคลัง ว่าด้วยการจัดซื้อจัดจ้างและการบริหารพัสดุภาครัฐ พ.ศ. ๒๕๖๐ ลงวันที่ ๒๓ สิงหาคม ๒๕๖๐ ข้อ 21,22,24,25 และ 26 \\
+๒.๓ \textcolor{red}{คำสั่งจังหวัดบุรีรัมย์ (ที่ 297/2568 ลงวันที่ 13 มกราคม 2568)} เรื่อง การมอบอำนาจเกี่ยวกับการพัสดุให้แก่รองผู้ว่าราชจังหวัด หัวหน้าส่วนราชการ นายอำเภอ ผู้อำนวยการโรงพยาบาล และสาธารณสุขอำเภอ ปฏิบัติราชการแทนผู้ว่าราชการจังหวัดบุรีรัมย์ ตามบัญชีมอบอำนาจเกี่ยวกับพัสดุ ผนวก ก.1 ๑. มอบอำนาจ ในการซื้อ การจ้างการเช่า การแลกเปลี่ยน การจ้างที่ปรึกษา การจ้างออกแบบหรือควบคุมงานก่อสร้าง ทุกกรณี ทุกขั้นตอน \\
+ยกเว้น โดยวิธีคัดเลือก ตามมาตรา 56 วรรคหนึ่ง (1) (ก) (ข) (ค) (ง) (จ) (ฉ) มาตรา 81 (1) (2) (3) และโดยวิธีเฉพาะเจาะจง ตามมาตรา 56 วรรคหนึ่ง (๒) (ก) (ค) (ง) (จ) (ฉ) (ช) มาตรา 70 (3) (ก) (ค) (ฉ) มาตรา 82 (1) (3) (4) ให้ผู้ดำรงตำแหน่งต่างๆ และตามบัญชีมอบอำนาจเกี่ยวกับพัสดุ โดยได้มอบอำนาจให้ผู้อำนวยการโรงพยาบาลชุมชนวงเงินไม่เกิน 3,๐๐๐,๐๐๐ บาท นั้น
+
+\vspace{1cm}
+งานแผนงานและยุทธศาสตร์ฯ\\
+เลขที่รายการ..................................\\
+หน่วยงาน (กลุ่มงาน/ฝ่าย/งาน ที่ขออนุมัติ)
+
+\vspace{0.5cm}
+\textbf{3. ข้อพิจารณา}
+
+ในการนี้ เพื่อให้การดำเนินการจัดจ้างบรรลุตามวัตถุประสงค์ งานพัสดุ กลุ่มงานบริหารทั่วไป
+โรงพยาบาลพุทไธสง ตำบลมะเฟือง อำเภอพุทไธสง จังหวัดบุรีรัมย์ จึงจะดำเนินการจัดซื้อ (รายการที่ขอซื้อ/
+จ้าง) ของโรงพยาบาลพุทไธสง จังหวัดบุรีรัมย์ ด้วยวิธีเฉพาะเจาะจง จำนวน (1 เครื่อง) วงเงินจำนวนทั้งสิ้น
+(115,000.00) บาท (หนึ่งแสนหนึ่งหมื่นห้าพันบาทถ้วน) โดยใช้เงินงบประมาณ (ประเภทค่าใช้จ่าย) โดยใช้
+งบประมาณจาก (ประเภทงบประมาณ) (หน่วยงานเจ้าของงบประมาณ) ตามพระราชบัญญัติการจัดซื้อจัดจ้าง
+และการบริหารพัสดุภาครัฐ พ.ศ. ๒๕๖๐ ลงวันที่ ๒๔ กุมภาพันธ์ ๒๕๖๐ และระเบียบกระทรวงการคลังว่าด้วย
+การจัดซื้อ จัดจ้างและการบริการพัสดุภาครัฐ พ.ศ. ๒๕๖๐ ลงวันที่ ๒๓ สิงหาคม ๒๕๖๐
+
+halo hello na
+\end{document}

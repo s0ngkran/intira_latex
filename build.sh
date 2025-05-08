@@ -1,0 +1,1 @@
+docker build -t latex-api ./latex_api
